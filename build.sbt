@@ -3,11 +3,12 @@ organization := "com.balihoo"
 name := "play2-bootstrap3"
 
 //this should be kept in sync with the play version
-version := "2.2.1-SNAPSHOT"
+version := "2.3.0-SNAPSHOT"
 
+scalaVersion := "2.11.1"
 
-seq(Twirl.settings: _*)
-
+lazy val root = (project in file(".")).enablePlugins(SbtTwirl)
+//seq(twirlSettings: _*)
 
 resolvers ++= Seq(
   "Typesafe Releases Repository" at "http://repo.typesafe.com/typesafe/releases/",
@@ -15,13 +16,12 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "com.typesafe.play" %% "play" % "2.2.1",
+  "com.typesafe.play" %% "play" % "2.3.0",
   //Testing
   "junit" % "junit" % "4.11" % "test",
-  "org.specs2" %% "specs2" % "2.1.1" % "test",
+  "org.specs2" %% "specs2" % "2.3.11" % "test",
   "org.mockito" % "mockito-core" % "1.9.5" % "test"
 )
-
 
 //Artifact Publishing Stuff, stolen from http://www.scala-sbt.org/0.13.0/docs/Community/Using-Sonatype.html
 //Not releasing to Maven Central...so cheating

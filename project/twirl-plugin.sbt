@@ -7,7 +7,6 @@ resolvers += Classpaths.sbtPluginSnapshots
 //  "sbt-plugin-releases" at "http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/"
 //)
 
-addSbtPlugin("io.spray" %% "sbt-twirl" % "0.7.0-SNAPSHOT" )
-
+addSbtPlugin("com.typesafe.sbt" % "sbt-twirl" % "1.0.2")
 
 
