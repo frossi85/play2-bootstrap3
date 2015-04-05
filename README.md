@@ -15,7 +15,7 @@ resolvers ++= Seq(
   "Sonatype Nexus Repository Manager Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots",
   "Spray IO Release Repo" at "http://repo.spray.io"
 )
-libraryDependencies += "com.balihoo" %% "play2-bootstrap3" % (play.core.PlayVersion.current + "-SNAPSHOT")
+libraryDependencies += "com.github.frossi85" %% "play2-bootstrap3" % (play.core.PlayVersion.current + "-SNAPSHOT")
 ```
 
 In your views, you generally want to update the implicitFieldConstructor. For example, to use the basic form input control:

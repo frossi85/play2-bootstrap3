@@ -1,8 +1,8 @@
 package twirl
 
+import org.junit.runner._
 import org.specs2.mutable._
 import org.specs2.runner._
-import org.junit.runner._
 import views.html.helper.FieldElements
 
 /**
@@ -16,12 +16,10 @@ class pimpForPlaySpec extends Specification {
   "pimpForPlay" should {
 
     "implicitly convert twirl html to play html" in {
-      val twirlHtml = new twirl.api.HtmlFormat.Appendable("SomeText")
+      val twirlHtml = new play.twirl.api.HtmlFormat.Appendable("SomeText")
 
 
       def requiresPlayHtml(playHtml:play.api.templates.Html) = true
-
-      import twirl.pimpForPlay._
 
       //Is there a better way to test this...it happens at compile time..so maybe not?
       requiresPlayHtml(twirlHtml) must beTrue
@@ -30,8 +28,6 @@ class pimpForPlaySpec extends Specification {
 
 
     "implicitly convert twirl template f to play template f" in {
-
-      import twirl.pimpForPlay._
 
       def requiresElementsToPlayHtmlLambda(f:FieldElements => play.api.templates.Html) = true
 

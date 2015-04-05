@@ -1,9 +1,9 @@
-organization := "com.balihoo"
+organization := "com.github.frossi85"
 
 name := "play2-bootstrap3"
 
 //this should be kept in sync with the play version
-version := "2.3.0-SNAPSHOT"
+version := "2.3.8-SNAPSHOT"
 
 scalaVersion := "2.11.1"
 
@@ -16,7 +16,7 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "com.typesafe.play" %% "play" % "2.3.0",
+  "com.typesafe.play" %% "play" % "2.3.8",
   //Testing
   "junit" % "junit" % "4.11" % "test",
   "org.specs2" %% "specs2" % "2.3.11" % "test",
